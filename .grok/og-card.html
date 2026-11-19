@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<style>
+  html, body {
+    margin: 0;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #111827;
+    color: #F8FAFC;
+    font-family: "Liberation Sans", "DejaVu Sans", sans-serif;
+  }
+  body { position: relative; }
+  .frame {
+    position: absolute;
+    inset: 28px;
+    border: 1px solid rgba(100, 116, 139, 0.45);
+    pointer-events: none;
+  }
+  .glow {
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: 720px;
+    height: 420px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.16), rgba(17, 24, 39, 0) 68%);
+    pointer-events: none;
+  }
+  .stage {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+  }
+  .sheet {
+    width: 196px;
+    height: 252px;
+    background: #F8FAFC;
+    border-radius: 6px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    position: relative;
+    flex: none;
+  }
+  .sheet.back {
+    position: absolute;
+    background: #E8EEF4;
+    z-index: 0;
+  }
+  .side {
+    position: relative;
+    width: 210px;
+    height: 280px;
+    flex: none;
+  }
+  .side.left { transform: rotate(-7deg); }
+  .side.right { transform: rotate(7deg); }
+  .side.left .back { left: 18px; top: 16px; transform: rotate(4deg); }
+  .side.right .back { right: 18px; top: 16px; transform: rotate(-4deg); }
+  .side .front { position: absolute; left: 0; top: 0; z-index: 1; }
+  .fold {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 42px 42px 0;
+    border-color: transparent #2563EB transparent transparent;
+    border-top-right-radius: 6px;
+  }
+  .lines { padding: 28px 22px 0; }
+  .bar {
+    height: 8px;
+    border-radius: 4px;
+    background: #64748B;
+    margin-bottom: 12px;
+    opacity: 0.85;
+  }
+  .bar.blue { background: #2563EB; opacity: 1; width: 46%; }
+  .bar.s1 { width: 78%; }
+  .bar.s2 { width: 92%; }
+  .bar.s3 { width: 64%; }
+  .bar.s4 { width: 84%; }
+  .lockup {
+    width: 560px;
+    text-align: center;
+    z-index: 2;
+    flex: none;
+  }
+  .name {
+    margin: 0;
+    font-size: 78px;
+    line-height: 0.9;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #F8FAFC;
+  }
+  .ai {
+    margin: 18px 0 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.46em;
+    color: #2563EB;
+    padding-left: 0.46em;
+  }
+  .rule {
+    width: 56px;
+    height: 3px;
+    background: #2563EB;
+    margin: 22px auto 18px;
+  }
+  .tag {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #94A3B8;
+  }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="frame"></div>
+  <div class="stage">
+    <div class="side left">
+      <div class="sheet back"></div>
+      <div class="sheet front">
+        <div class="fold"></div>
+        <div class="lines">
+          <div class="bar s1"></div>
+          <div class="bar s2"></div>
+          <div class="bar blue"></div>
+          <div class="bar s3"></div>
+          <div class="bar s4"></div>
+        </div>
+      </div>
+    </div>
+    <div class="lockup">
+      <p class="name">DOCUFLOW</p>
+      <p class="ai">AI</p>
+      <div class="rule"></div>
+      <p class="tag">Le flux documentaire.</p>
+    </div>
+    <div class="side right">
+      <div class="sheet back"></div>
+      <div class="sheet front">
+        <div class="fold"></div>
+        <div class="lines">
+          <div class="bar s2"></div>
+          <div class="bar blue"></div>
+          <div class="bar s1"></div>
+          <div class="bar s4"></div>
+          <div class="bar s3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "DOCUFLOW AI",
+      "hasCanvas": false,
+      "bodyTextLen": 1313,
+      "bodyTextHash": "764a44103646e1931c91fee7d9d4f83cf30bb056232fa28b4fb920c38b1368c0",
+      "bodyTextPrefix": "DOCUFLOW AI EN Connexion GED pour l'Afrique francophone et au-de",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "DOCUFLOW AI",
+      "hasCanvas": false,
+      "bodyTextLen": 1313,
+      "bodyTextHash": "764a44103646e1931c91fee7d9d4f83cf30bb056232fa28b4fb920c38b1368c0",
+      "bodyTextPrefix": "DOCUFLOW AI EN Connexion GED pour l'Afrique francophone et au-de",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
